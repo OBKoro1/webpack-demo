@@ -1,0 +1,97 @@
+{
+  "name": "autoCommit",
+  "displayName": "Auto Commit",
+  "description": "自动提交commit到github",
+  "publisher": "OBKoro1",
+  "version": "1.0.3",
+  "scripts": {
+    "build": "vsce package",
+    "vscode:prepublish": "webpack --mode production",
+    "compile": "webpack --mode none",
+    "debug": "node --inspect-brk=5858 ./node_modules/webpack/bin/webpack --mode none --watch",
+    "koro": "node --inspect-brk=5858 ./node_modules/webpack/bin/webpack",
+    "watch": "webpack --mode none --watch",
+    "pretest": "npm run compile",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "yarn run compile && node ./node_modules/vscode/bin/test"
+  },
+  "homepage": "https://github.com/OBKoro1/autoCommit",
+  "license": "MIT",
+  "author": {
+    "name": "OBKoro1",
+    "email": "obkoro1@foxmail.com",
+    "url": "http://obkoro1.com/web_accumulate/"
+  },
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#3B4859",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OBKoro1/autoCommit"
+  },
+  "bugs": {
+    "url": "https://github.com/OBKoro1/koro1FileHeader/issues",
+    "email": "obkoro1@foxmail.com"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.autoCommit"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.autoCommit",
+        "title": "控制Github绿色格子的commit数量",
+        "category": "auto commit Github自动提交 "
+      }
+    ]
+  },
+  "engines": {
+    "vscode": "^1.41.0"
+  },
+  "keywords": [
+    "vscode autoCommit",
+    "autoCommit",
+    "auto commit",
+    "autocommit",
+    "自动commit",
+    "vscode 自动commit",
+    "vscode github",
+    "vscode commit",
+    "github commit",
+    "github autoCommit",
+    "git commit",
+    "自动提交",
+    "git 自动提交",
+    "github 自动提交",
+    "git",
+    "github",
+    "commit",
+    "koro1",
+    "obkoro1",
+    "github 自动commit"
+  ],
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.41.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "glob": "^7.1.5",
+    "mocha": "^6.2.2",
+    "ts-loader": "^6.2.1",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4",
+    "vscode": "^1.1.36",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}
